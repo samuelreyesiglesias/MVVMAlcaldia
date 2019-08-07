@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" xmlns:VM="clr-namespace:AlcaldiaMVVM.ViewModel"
+             x:Class="AlcaldiaMVVM.View.GuardarContribuyente">
+    <ContentPage.BindingContext>
+        <VM:GuardarContribuyenteViewModel>
+        </VM:GuardarContribuyenteViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout x:Name="MyForm">
+            <Button Text="Ver datos" Command="{Binding Ver}"></Button>
+            <Entry x:Name="EntryIdContribuyente" Placeholder="IdContribuyente" Text="{Binding IdContribuyente}"></Entry>
+            <Entry x:Name="EntryNombre" Placeholder="Nombre" Text="{Binding Nombre}"></Entry>
+            <Entry x:Name="EntryApellido" Placeholder="Apellido" Text="{Binding Apellido}"></Entry>
+            <Entry x:Name="EntryDireccion" Placeholder="Direccion" Text="{Binding Direccion}"></Entry>
+            <Entry x:Name="EntryDUI" Placeholder="DUI" Text="{Binding DUI}"></Entry>
+            <Entry x:Name="EntryNIT" Placeholder="NIT" Text="{Binding NIT}"></Entry>
+            <Button Text="Guardar" Command="{Binding Guardar}"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

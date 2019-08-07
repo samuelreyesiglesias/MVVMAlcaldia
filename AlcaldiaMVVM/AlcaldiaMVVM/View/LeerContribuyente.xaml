@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--/IMPORTANTE NOTA: TODO LO QUE APAREZCA EN VERDE SON COMENTARIOS, ES DECIR ESTS SERAN IGNORADOS POR EL COMPILADOR.
+    POR LO TANTO PUEDES ELIMINARLOS EN CUALQUIER MOMENTO... LOS COMENTARIOS LOS HE AGREGADO A MANERA DE EJEMPLIFICAR CADA ACCION EN CADA ARCHIVO...
+    SOLO SON PARA DOCUMENTAR CADA FRAGMENTO DE CODIGO, PERO PUEDES ELIMINARLOS EN CUALQUIER MOMENTO/-->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AlcaldiaMVVM.View.LeerContribuyente">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="Agregar nuevo" Clicked="Button_Clicked"></Button>
+            <ListView HasUnevenRows="true" x:Name="ListaDatos" ItemSelected="ListaDatos_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell Height="110">
+                            <StackLayout>
+                                <Label Text="{Binding IdContribuyente}"></Label>
+                                <Label Text="{Binding Nombre}"></Label>
+                                <Label Text="{Binding Apellido}"></Label>
+                                <Label Text="{Binding Direccion}"></Label>
+                                <Label Text="{Binding DUI}"></Label>
+                                <Label Text="{Binding NIT}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
